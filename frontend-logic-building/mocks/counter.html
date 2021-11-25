@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="number">0</p>
+    <button id="increse">+</button>
+    <button id="decrease">-</button>
+
+    <!-- <p id="output"></p> -->
+    
+    <script>
+        let counterInput = document.getElementById("number");
+
+        document.querySelector("#increse").addEventListener('click', () => {
+        let counterCurrVal = parseInt(counterInput.innerText)
+        counterInput.innerText = counterCurrVal + 1;
+        });
+
+        document.querySelector("#decrease").addEventListener('click', () => {
+        let counterCurrVal = parseInt(counterInput.innerText)
+        counterInput.innerText = counterCurrVal - 1;
+        });
+    </script>
+
+</body>
+</html>

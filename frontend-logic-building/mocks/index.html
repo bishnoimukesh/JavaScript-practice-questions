@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <input type="text" id="tweet" onkeyup="success()" placeholder="Type something" oninput="success()" maxlength="setMaxLength()"/>
+    <button id="button" disabled>Tweet</button>
+
+    <!-- <p id="output"></p> -->
+
+    <script>
+    function success() {
+	 if(document.getElementById("tweet").value==="") { 
+            document.getElementById('button').disabled = true; 
+        }else { 
+            document.getElementById('button').disabled = false;
+        }
+    }
+    function setMaxLength() {
+        if(this.value.maxlength > 2){
+            document.getElementById('button').disabled = true;
+        }
+    }
+    </script>
+</body>
+</html>

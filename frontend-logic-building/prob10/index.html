@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="reverse">Reverse</button>
+    <p id="output"></p>
+
+    <script>
+        let inputText = document.querySelector("#input");
+        let btn = document.querySelector("#reverse");
+        let output = document.querySelector("#output");
+
+        inputText.addEventListener("input", function () {
+            output.innerHTML = inputText.value;
+        });
+
+        btn.addEventListener("click", reverseInput)
+        function reverseInput() {
+            let reveseText = inputText.toString().split("").reverse().join('');
+            console.log(reveseText.value);
+            output.innerHTML = reverseInput.value;
+        }
+    </script>
+</body>
+</html>
